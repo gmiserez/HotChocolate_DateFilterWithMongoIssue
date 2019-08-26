@@ -55,6 +55,7 @@ namespace Demo
             services.AddGraphQL(s =>
             {
                 ISchemaBuilder builder = SchemaBuilder.New()
+                    .AddType<CityType>()
                     .AddQueryType<QueryType>()
                     .AddServices(s);
 
